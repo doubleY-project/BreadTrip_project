@@ -1,0 +1,82 @@
+.bodyWrap{
+    max-width: 1280px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+    padding: 10px;
+    position: relative;
+}
+
+/* 맨 위 요소들 */
+.topBox{
+    display: flex;
+    height: 80px;
+    background-color: pink;
+}
+#topNames{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 15px 10px;
+}
+.topName{
+    padding: 12px 10px 0 10px;
+}
+#topButton{
+    display: flex;
+    justify-content: flex-end;
+    padding: 15px 10px;
+}
+.topBtName{
+    padding: 10px 20px 0 10px;
+}
+
+/* 맨 위 요소 이미지 */
+.topBtImg{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: gray;
+    padding: 5px;
+}
+.topLogoImg{
+    width: 100px;
+    height: 70px;
+    position: fixed;
+    left: 10px;
+    top: 10px;
+}
+
+/* 메인동영상 애니메이션 */
+.splash-text {
+    text-align: center;
+    font-size: 50px;
+    opacity: 0;
+    transform: translateY(-100px);
+    transition: opacity 1s, transform 1s;
+    position: relative;
+    z-index: 1;
+  }
+
+
+
+
+/* 맨 밑 날짜 표시 요소 */
+.dayCir{
+    color: #fff;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 97px;
+    height: 97px;
+    background: linear-gradient(to bottom, #fd5392, #f86f64);
+}
+.cirDate{
+    font-size: 26px;
+}
