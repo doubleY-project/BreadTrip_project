@@ -5,6 +5,10 @@
     overflow: hidden;
 }
 
+.test{
+    color: red;
+}
+
 video{
     object-fit: fill;
     width: 100%;
