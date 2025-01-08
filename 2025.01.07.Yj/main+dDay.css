@@ -83,7 +83,7 @@ body {
     height: 100%;
 }
 
-video {
+.firstScreen video {
     width: 100%;
     height: 100vh;
     object-fit: fill; 
@@ -138,14 +138,14 @@ video {
     font-size: 30px;
     font-weight: bold;
     padding-top: 100px;
-    padding-left: 80px;
+    padding-left: 50px;
     color: pink;
 }
 
 .mentRomantic {
     font-size: 100px;
     padding-top: 10px;
-    padding-left: 80px;
+    padding-left: 50px;
     
     /* white-space: pre-wrap; */
 }
@@ -164,21 +164,43 @@ video {
 
 /* 세번째 페이지 */
 .thirdScreen {
-    background-color: red;
+    background-color: white;
     width: 100%;
     /* 마지막에 높이 설정해야됨 */
     height: 800px;
-    font-size: 24px;
+    font-size: 17px;
     color: #333;
+    padding-left: 20px;
 }
 
 .inviteMent{
     display: flex;
+    padding-bottom: 20px;
 }
 
 .inviteMent2{
     padding-left: 10px;
 }
+
+/* video */
+.videoPoster{
+    display: flex;
+    gap: 20px;
+}
+
+.videoPoster video{
+    width: 1020px;
+    height: 600px;
+    border-radius: 13px;
+    object-fit: fill; 
+}
+.videoPoster img{
+    width: 420px;
+    height: 600px;
+    object-fit: fill; 
+    border-radius: 20px;
+}
+
 
 /* 맨 밑 날짜 표시 요소 */
 .dayCir{
