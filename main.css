@@ -1,12 +1,6 @@
-/* .bodyWrap{
-    max-width: 1280px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    margin: auto;
-    padding: 10px;
-    position: relative;
-} */
+body{
+  overflow:  hidden; /* 슬라이드 밖의 내용 가리기 */
+}
 
 /* 맨 위 요소들 */
 .topBox{
@@ -51,15 +45,7 @@
     top: 10px;
 }
 
-/* 메인 동영상 애니메이션 */
-.slideBackground {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: calc(100% - 80px); /* 높이를 100% - 80px로 설정 */
-  position: relative; /* 자식 요소를 가운데 정렬하기 위한 설정 */
-  overflow: hidden; /* 슬라이드 밖의 내용 가리기 */
-}
+/* 메인 동영상  */
 .slideText {
   position: absolute;
   white-space: nowrap;
@@ -69,12 +55,11 @@
   animation: slided 15s linear infinite;
   /* 가운데 정렬 */
   top: 50%;
-  left: 0;
   transform: translate(100%, -50%);
 }
 @keyframes slided {
   from {
-    transform: translate(100%, -50%); /* 오른쪽에서 시작 */
+    transform: translate(70%, -50%); /* 오른쪽에서 시작 */
   }
   to {
     transform: translate(-100%, -50%); /* 화면 왼쪽 끝으로 이동 */

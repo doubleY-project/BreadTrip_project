@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./addMain.css" />
+</head>
+<body>
+    <!-- 맨 위 요소들 -->
+    <div class="topBox">
+        <img class="topLogoImg" src="../imgs/topLogo.jpg" />
+        <div id="topNames">
+            <div class="topName">행사소개</div>
+            <div class="topName">프로그램</div>
+            <div class="topName">일정표</div>
+            <div class="topName">참여시설</div>
+            <div class="topName">사전신청</div>
+            <div class="topName">오시는길</div>
+        </div>
+        <div id="topButton">
+            <div class="topBtName"><b>MENU</b></div>
+            <img type="button" id="topBtImg" class="topBtImg" src="../imgs/menu.png" />
+        </div>
+        <div class="topDate" style="display: none;"></div>
+        <script src="../topBox.js"></script>
+    </div>
+    
+    <!-- 슬라이드 애니메이션 -->
+    <div class="mainSlide">
+        <div class="slideBackground"></div>
+    </div>
+
+    <!-- 비디오영상 및 디데이 및 2/3 스크린 -->
+    <div class="bodyWrap">
+        <!-- 첫번째 화면 -->
+        <div class="firstScreen">
+            <video src="../imgVd/video.mp4" autoplay muted loop></video>
+            <div class="mainDate">2024.09.28 Saturday </div>
+            <div id="remain-Time" class="ddaySet"></div>
+            <div class="slideText">Welcom to Bread Trip</div>
+            <script src="../dDay.js"></script>
+        </div>
+
+        <!-- 두번째 화면 -->
+        <div class="secondScreen">
+            <div class="mentStartDate">Start _ 2024.09.28 <br/> </div>
+            <div class="mentRomantic">로맨틱 대전 <br/> 빵으로 피어나다</div>
+            <div class="startArrow">
+                <div class="mentStart">START<br/></div>
+                <img src="../imgVd/arrow.png" class="arrowImg"></div>
+            </div>
+        </div>
+
+        <!-- 세번째 화면 -->
+        <div class="thirdScreen">
+            <div class="inviteMent">
+                <div class="inviteMent1">올 가을,</div>
+                <div class="inviteMent2">2024 대전 빵 축제</div>
+                <div class="inviteMent3">에 여러분을 초대합니다</div>
+            </div>
+        </div>
+
+
+        <!-- 네번째 화면 -->
+        <div class="forthScreen">
+            <div calss="forthText">빵빵한 참여업체를 확인하세요!</div>
+            <div class="cafeListBox">
+                <img class="cafeList" src="../imgs/cafeList1.jpg" />
+                <img class="cafeList" src="../imgs/cafeList2.jpg" />
+                <img class="cafeList" src="../imgs/cafeList3.jpg" />
+                <img class="cafeList" src="../imgs/cafeList4.jpg" />
+                <img class="cafeList" src="../imgs/cafeList5.jpg" />
+                <img class="cafeList" src="../imgs/cafeList6.jpg" />
+                <img class="cafeList" src="../imgs/cafeList7.jpg" />
+                <img class="cafeList" src="../imgs/cafeList8.jpg" />
+                <img class="cafeList" src="../imgs/cafeList9.jpg" />
+                <img class="cafeList" src="../imgs/cafeList10.jpg" />
+            </div>
+        </div>
+
+
+    <!-- 맨 밑 날짜 표시 요소 -->
+    <div class="dayCir">
+        <span>D DAY<br></span>
+        <div class="cirDate"><b>99+</b></div>
+    </div>
+</body>
+</html>
