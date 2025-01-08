@@ -9,11 +9,12 @@ body {
     display: flex;
     width: 100%;
     height: 80px;
-    /* background-color: pink; */
+    background-color: white;
     position: sticky;
     top: 0;
     z-index: 1000;
 }
+
 #topNames{
     width: 100%;
     display: flex;
@@ -51,37 +52,60 @@ body {
     top: 0;
 }
 
-/* 메인 동영상 애니메이션 */
-.slideText {
-    position: absolute;
-    white-space: nowrap;
-    font-size: 320px;
-    font-weight: 900;
-    font-family: "Roboto", sans-serif;
-    animation: slided 15s linear infinite;
-    /* 가운데 정렬 */
-    top: 50%;
-    transform: translate(100%, -50%);
-    /* 배경색과 텍스트 투명처리 */
-    background-color: black;
-    color: transparent;
-    -webkit-background-clip: text;
-    background-clip: text;
-    mix-blend-mode: screen;
+.bodyWrap{
+    width: 100%;
+    position: relative;
+    overflow: hidden;
 }
+
+/* 메인 동영상 애니메이션 */
+.mainSlide {
+    /* background-color: white; */
+    top:0px;
+    position: absolute;
+    height: 650px;
+    display: flex;
+    align-items: center; /* 세로 가운데 정렬 */
+    /* z-index: 10; */
+  }
+.textWrapper {
+    display: inline-block;
+    white-space: nowrap;
+    animation: slided 150s linear infinite; /* 애니메이션 무한 반복 */
+}
+.mainSlide p {
+    color: transparent; /* 텍스트 색상 투명하게 설정 */
+    -webkit-text-stroke: 2px white; /* 글자 외곽선 추가 (선택 사항) */
+    font-size: 650px;
+    font-weight: 600;
+    display: inline-block;
+    margin-right: 50px; /* 글자 사이 간격 */
+}
+
 @keyframes slided {
     from {
-      transform: translate(70%, -50%); /* 오른쪽에서 시작 */
+        transform: translateX(0); /* 텍스트가 왼쪽에서 시작 */
     }
     to {
-      transform: translate(-100%, -50%); /* 화면 왼쪽 끝으로 이동 */
+        transform: translateX(-100%); /* 텍스트가 왼쪽으로 끝까지 이동 */
     }
 }
 
-/* .bodyWrap {
-    width: 100%;
-    height: 100%;
-} */
+/* 서포트 이미지 애니메이션 */
+.supportImgFile{
+    display: flex; /* 이미지를 가로로 배치 */
+    gap: 20px;
+    animation: slided 30s linear infinite; /* 애니메이션 무한 반복 */
+}
+.supportImgFile .supportList{
+    border-radius: 13px;
+    /* border: 2px solid black; */
+    padding: 10px;
+    margin: 30px 10px;
+    width: 300px; 
+    height: 150px;
+    object-fit: contain;
+}
 
 .firstScreen{
     position: relative;
@@ -169,22 +193,43 @@ video {
 
 /* 세번째 화면 */
 .thirdScreen {
-    background-color: rgb(214, 230, 237);
+    background-color: white;
     width: 100%;
     /* 마지막에 높이 설정해야됨 */
     height: 800px;
-    font-size: 24px;
+    font-size: 17px;
     color: #333;
+    padding-left: 20px;
 }
 
 .inviteMent{
     display: flex;
+    padding-bottom: 20px;
 }
 .inviteMent2{
     padding-left: 10px;
 }
 
-/* 네번째 화면 */
+/* 세번째 화면 */
+
+/* video */
+.videoPoster{
+    display: flex;
+    gap: 20px;
+}
+
+.videoPoster video{
+    width: 1020px;
+    height: 600px;
+    border-radius: 13px;
+    object-fit: fill; 
+}
+.videoPoster img{
+    width: 420px;
+    height: 600px;
+    object-fit: fill; 
+    border-radius: 20px;
+}
 
 /* 빵집 리스트 나열 */
 .cafeListBox{
