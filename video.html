@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./video.css" />
+</head>
+<body>
+  <div class="topBox">
+    <img class="topLogoImg" src="../imgs/topLogo.jpg" />
+    <div id="topNames">
+        <div class="topName">행사소개</div>
+        <div class="topName">프로그램</div>
+        <div class="topName">일정표</div>
+        <div class="topName">참여시설</div>
+        <div class="topName">사전신청</div>
+        <div class="topName">오시는길</div>
+    </div>
+    <div id="topButton">
+        <div class="topBtName"><b>MENU</b></div>
+        <img type="button" id="topBtImg" class="topBtImg" src="../imgs/menu.png" />
+    </div>
+    <div class="topDate" style="display: none;"></div>
+    <script src="./topBox.js"></script>
+  </div>
+  
+  <!-- 비디오영상 및 디데이 및 2/3 스크린 -->
+  <div class="bodyWrap">
+    <!-- 첫번째 화면 -->
+    <div class="firstScreen">
+        <!-- 비디오 -->
+        <video src="../imgVd/video.mp4" autoplay muted loop></video>    
+        <!-- Canvas (구멍 뚫린 텍스트) -->
+        <div class="canvasBox">
+          <!-- Canvas -->
+          <canvas id="canvas"></canvas>
+      </div>
+  </div>
+</body>
+<script src="videoMent.js"></script>
+</html>
