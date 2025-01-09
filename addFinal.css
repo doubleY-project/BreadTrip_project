@@ -306,86 +306,95 @@ transform: translateY(0); /* 원래 위치로 이동 */
 
 /* 다섯번째 화면 */
 .fifthScreen{
-    width: 100%;
     padding-top: 100px;
     display: flex;
-    height: 900px;
+    justify-content: space-between;
+    height: 1100px;
 }
 
+/* 왼쪽 */
 .fifthMent{
-    padding-left: 100px;
+    flex: 4.5;
+    padding-left: 50px;
 }
-
 .fifthMent2{
     padding-top: 20px;
     font-size: 60px;
 }
 
-.notice p{
-    height: 50px;
-    width: 500px;
-    border-bottom-style: solid;
-    font-weight: bolder;
-}
-
+/* 오른쪽 */
 .notice{
-    padding-left: 200px;
+    flex: 5.5;
 }
-
 .notice a{
     display: flex;
     border-bottom: solid 2px;
-    padding-bottom: 20px;
-
+    margin: 30px;
 }
-
-.info1 {
+.noticeTop{
+    height: 80px;
+    font-size: 25px;
     display: flex;
-    flex-direction: column; 
-    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: bolder;
 }
-
-.info {
-    display: flex;
-    flex-direction: column; 
-    text-align: center;
-    padding-top: 10px;
-}
-
 .infonum{
+    width: 130px;
+    display: flex;
+    flex-direction: column; 
+    text-align: center;
     font-size: 50px;
+    padding-bottom: 13px;
+    padding-left: 10px;
 }
-
 .infodate{
-    font-size: 10px;
+    font-size: 13px;
 }
-
-.title1{
-    padding-left: 40px;
-    padding-top: 20px;
-}
-
 .title{
-    padding-left: 40px;
-    padding-top: 35px;
+    padding: 25px;
+    margin-left: 10px;
 }
   
 /* snsList */
 .snsBox p{
-    padding-top: 20px;
-    border: none;
+    font-size: 20px;
+    font-weight: bolder;
+    padding-left: 20px;
 }
 .snsListFile {
+    padding: 0 10px;
     display: flex;
-    justify-content: space-between; /* 간격 균등 분배 */
-    gap: 5px; /* 이미지 간격 */
+    gap: 5px;
 }
-
+.imgWrapper {
+    position: relative;
+    cursor: pointer;
+}
 .snsList {
-    object-fit: cover; /* 비율 유지 */
+    display: block;
+    transition: transform 0.3s ease; /* hover 시 약간 확대 */
 }
-
-
+.imgWrapper:hover .snsList {
+    transform: scale(1.05); /* 확대 효과 */
+    opacity: 0.5;
+    transition: opacity 0.5s ease;
+}
+.hoverText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    font-size: 20px;
+    font-weight: 900;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.imgWrapper:hover .hoverText {
+    opacity: 1; /* hover 시 텍스트 표시 */
+}
 
 /* 맨 밑바닥 */
 .bottom{
