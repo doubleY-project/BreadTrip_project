@@ -79,6 +79,7 @@ canvas {
   
 /* 비디오 */
 .firstScreen video {
+    padding-top: 100px;
     position: absolute;
     width: 100%;
     height: 100vh;

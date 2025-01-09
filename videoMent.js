@@ -2,6 +2,10 @@
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
+
+
+
+
 // 텍스트 애니메이션을 위한 변수 설정
 let offsetX = 0;
 let canvasPositionY = 0; 
