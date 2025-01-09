@@ -10,7 +10,7 @@ body {
     width: 100%;
     height: 80px;
     background-color: white;
-    position: sticky;
+    position: fixed;
     top: 0;
     z-index: 1000;
 }
@@ -45,41 +45,48 @@ body {
     background-color: gray;
     padding: 7px;
 }
+
 .topLogoImg{
     width: 100px;
     height: 70px;
-    position: sticky;
+    position: fixed;
     top: 0;
 }
+
+
+/* 메인 동영상 애니메이션 */
 .bodyWrap{
     width: 100%;
     position: relative;
     overflow: hidden;
 }
 
-/* 메인 동영상 애니메이션 */
-.mainSlide {
-    /* background-color: white; */
-    top:0px;
-    position: absolute;
-    height: 650px;
-    display: flex;
-    align-items: center; /* 세로 가운데 정렬 */
-    /* z-index: 10; */
+/* 첫화면 */
+.firstScreen{
+    position: relative;
+}
+
+.canvasBox{
+    width: 100%; 
+    height: 100vh;
+}
+
+canvas {
+    position: fixed;
+    z-index: 100;
+    transition: opacity 2s ease, transform 1s;
   }
-.textWrapper {
-    display: inline-block;
-    white-space: nowrap;
-    animation: slided 150s linear infinite; /* 애니메이션 무한 반복 */
+  
+/* 비디오 */
+.firstScreen video {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    object-fit: fill;
 }
-.mainSlide p {
-    color: transparent; /* 텍스트 색상 투명하게 설정 */
-    -webkit-text-stroke: 2px white; /* 글자 외곽선 추가 (선택 사항) */
-    font-size: 650px;
-    font-weight: 600;
-    display: inline-block;
-    margin-right: 50px; /* 글자 사이 간격 */
-}
+  
+
+/* 서포트 이미지 애니메이션 */
 
 @keyframes slided {
     from {
@@ -90,7 +97,6 @@ body {
     }
 }
 
-/* 서포트 이미지 애니메이션 */
 .supportImgFile{
     display: flex; /* 이미지를 가로로 배치 */
     gap: 20px;
@@ -106,18 +112,6 @@ body {
     object-fit: contain;
 }
 
-/* 첫화면 */
-.firstScreen{
-    position: relative;
-}
-
-/* 메인화면 비디오 */
-video {
-    width: 100%;
-    height: 100vh;
-    object-fit: fill; 
-}
-
 /* 메인화면 날짜 */
 .mainDate {
     font-size: 20px;
@@ -131,7 +125,6 @@ video {
     width: 300px;
     text-align: center;
     animation: moveDiagonal 5s infinite alternate;
-    z-index: 100;
 }
 
 /* 메인화면 둥근 박스 애니메이션 */
@@ -164,13 +157,13 @@ video {
 }
 
 .hidden {
-opacity: 0;
-transform: translateY(50px); /* 아래로 이동된 상태로 숨김 */
-transition: all 0.5s; /* 부드러운 애니메이션 효과 */
+    opacity: 0;
+    transform: translateY(50px); /* 아래로 이동된 상태로 숨김 */
+    transition: all 0.5s; /* 부드러운 애니메이션 효과 */
 }
 .show {
-opacity: 1;
-transform: translateY(0); /* 원래 위치로 이동 */
+    opacity: 1;
+    transform: translateY(0); /* 원래 위치로 이동 */
 }
 
 /* 로맨틱 멘트 디자인 */
@@ -225,7 +218,7 @@ transform: translateY(0); /* 원래 위치로 이동 */
     padding-bottom: 80px;
 }
 
-/* video */
+/* baking video랑 poster 이미지 */
 .videoPoster{
     display: flex;
     gap: 20px;
