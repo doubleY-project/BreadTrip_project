@@ -158,7 +158,7 @@ video {
 .secondScreen {
     background-color: white;
     width: 100%;
-    height: 900px;
+    height: 750px;
     font-size: 24px;
     color: #333;
 }
@@ -166,7 +166,7 @@ video {
 .hidden {
 opacity: 0;
 transform: translateY(50px); /* 아래로 이동된 상태로 숨김 */
-transition: all 2s; /* 부드러운 애니메이션 효과 */
+transition: all 0.5s; /* 부드러운 애니메이션 효과 */
 }
 
 .show {
@@ -177,7 +177,7 @@ transform: translateY(0); /* 원래 위치로 이동 */
 .mentStartDate {
     font-size: 30px;
     font-weight: bold;
-    padding-top: 100px;
+    padding-top: 150px;
     padding-left: 80px;
     color: pink;
 }
@@ -187,38 +187,62 @@ transform: translateY(0); /* 원래 위치로 이동 */
     padding-top: 10px;
     padding-left: 80px;
 }
-.startArrow{
+
+.startMent{
     float:right;
 }
+
 .mentStart{
     font-size: 130px;
     padding-right: 50px;
     font-weight: bolder;
+    padding-top: 50px;
 }
-.arrowImg{
-    float: right;
-    padding-right: 50px;
+
+/* 두번째 화면 아래 - 화살표 및 멘트 한줄 */
+
+.secondBottomScreen{
+    width: 100%;
+    height: 220px;
 }
+
+.arrowMent{
+    display: flex;
+    gap: 900px;
+}
+
+.inviteMent {
+    display: flex;
+    align-items: end;
+    padding-left: 20px;
+
+    transform: translateX(-50px);
+    opacity: 0;
+    transition: transform 0.7s ease, opacity 0.7s ease;
+}
+
+.inviteMent2{
+    padding-left: 10px;
+}
+
+.arrowImg {
+    transform: translateY(-50px); 
+    opacity: 0;
+    transition: transform 0.7s ease, opacity 0.7s ease;
+} 
 
 /* 세번째 화면 */
 .thirdScreen {
     background-color: white;
     width: 100%;
     /* 마지막에 높이 설정해야됨 */
-    height: 800px; /* 변경 -> 후원업체 애니메이션 설정 후 다시 변경해야 함*/
+    height: 1000px; /* 변경 -> 후원업체 애니메이션 설정 후 다시 변경해야 함*/
     font-size: 17px;
     color: #333;
     padding-left: 20px;
 }
 
-.inviteMent{
-    display: flex;
-    padding-bottom: 20px;
-}
-.inviteMent2{
-    padding-left: 10px;
-}
-/* 세번째 화면 */
+
 /* video */
 .videoPoster{
     display: flex;
@@ -237,6 +261,7 @@ transform: translateY(0); /* 원래 위치로 이동 */
     object-fit: fill; 
     border-radius: 20px;
 }
+
 /* 빵집 리스트 나열 */
 .cafeListBox{
     display: flex;
@@ -246,12 +271,6 @@ transform: translateY(0); /* 원래 위치로 이동 */
     height: 250px;
 }
 
-/* 변경 */
-.supportImgFile{
-    flex-direction: column;
-}
-
-/* 추가 */
 /* 네번째 화면 */
 
 .forthText{
@@ -289,7 +308,6 @@ transform: translateY(0); /* 원래 위치로 이동 */
     object-fit: cover;
 }
 
-/* 추가 */
 /* 다섯번째 화면 */
 
 .fifthScreen{
