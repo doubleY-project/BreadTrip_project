@@ -163,17 +163,6 @@ video {
     color: #333;
 }
 
-.hidden {
-opacity: 0;
-transform: translateY(50px); /* 아래로 이동된 상태로 숨김 */
-transition: all 2s; /* 부드러운 애니메이션 효과 */
-}
-
-.show {
-opacity: 1;
-transform: translateY(0); /* 원래 위치로 이동 */
-}
-
 .mentStartDate {
     font-size: 30px;
     font-weight: bold;
@@ -218,7 +207,6 @@ transform: translateY(0); /* 원래 위치로 이동 */
 .inviteMent2{
     padding-left: 10px;
 }
-/* 세번째 화면 */
 /* video */
 .videoPoster{
     display: flex;
@@ -237,56 +225,64 @@ transform: translateY(0); /* 원래 위치로 이동 */
     object-fit: fill; 
     border-radius: 20px;
 }
-/* 빵집 리스트 나열 */
-.cafeListBox{
-    display: flex;
-}
-.cafeList{
-    width: 250px;
-    height: 250px;
-}
 
-/* 변경 */
-.supportImgFile{
-    flex-direction: column;
-}
-
-/* 추가 */
 /* 네번째 화면 */
-
-.forthText{
-    padding-top: 100px;
-}
-
-.forthScreen {
-    display: flex;
-    background-color: white;
-    justify-content: center;
-    align-items: center;
-    font-size: 50px;
-    width: 100%;
-    height: 800px;
-    padding-left: 20px;
-    text-align: center;
-    overflow: hidden;
+/* 빵집 리스트 나열 */
+.swiperContainer {
     position: relative;
-    flex-direction: column;
+  }
+.swiper-wrapper {
+    display: flex; /* 슬라이드를 가로로 정렬 */
+    transition: transform 0.3s ease-in-out;
+    will-change: transform;
+    gap: 10px;
+    padding-right: 10px;
 }
-  
-.swiper-container {
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-}
-  
-.cafeListBox {
-    display: flex;
-}
-
 .cafeList {
-    width: 350px; /* Individual slide width */
-    height: 400px;
-    object-fit: cover;
+    flex: 0 0 calc(25% - 10px); /* 한 화면에 4개의 슬라이드를 표시 */
+    height: auto;
+    border-radius: 10px;
+}
+.swiperBtn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+.prevBtn {
+    left: 10px;
+}
+.nextBtn {
+    right: 10px;
+}
+.swiperBtn:hover, .cafeBtn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* 카페리스트 확인 멘트 */
+.forthScreen span:first-child{
+    display: block;
+    text-align: center;
+    font-size: 30px;
+}
+.forthScreen .highlight {
+    color: rgb(236, 94, 118);
+}
+
+/* 카페리스트 더보기 버튼 */
+.cafeBtn{
+    width: 150px;
+    height: 50px;
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 25px;
 }
 
 /* 추가 */
@@ -412,4 +408,4 @@ transform: translateY(0); /* 원래 위치로 이동 */
 }
 .cirDate{
     font-size: 26px;
-}  
+}
