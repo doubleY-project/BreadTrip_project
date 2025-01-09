@@ -231,15 +231,65 @@ video {
     border-radius: 20px;
 }
 
+/* 네번째 화면 */
+
 /* 빵집 리스트 나열 */
-.cafeListBox{
-    display: flex;
+.swiperContainer {
+    position: relative;
+  }
+.swiper-wrapper {
+    display: flex; /* 슬라이드를 가로로 정렬 */
+    transition: transform 0.3s ease-in-out;
+    will-change: transform;
+    gap: 10px;
+    padding-right: 10px;
 }
-.cafeList{
-    width: 250px;
-    height: 250px;
+.cafeList {
+    flex: 0 0 calc(25% - 10px); /* 한 화면에 4개의 슬라이드를 표시 */
+    height: auto;
+    border-radius: 10px;
+  }
+.swiperBtn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+  }
+.prevBtn {
+    left: 10px;
+}
+.nextBtn {
+    right: 10px;
+}
+.swiperBtn:hover, .cafeBtn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
+/* 카페리스트 확인 멘트 */
+.forthScreen span:first-child{
+    display: block;
+    text-align: center;
+    font-size: 30px;
+}
+.forthScreen .highlight {
+    color: rgb(236, 94, 118);
+}
+
+/* 카페리스트 더보기 버튼 */
+.cafeBtn{
+    width: 150px;
+    height: 50px;
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 25px;
+}
 
 /* 맨 밑 날짜 표시 요소 */
 .dayCir{
