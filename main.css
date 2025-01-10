@@ -8,7 +8,7 @@ body {
 .topBox{
     display: flex;
     width: 100%;
-    height: 80px;
+    height: 90px;
     background-color: white;
     position: fixed;
     top: 0;
@@ -44,6 +44,7 @@ body {
     border-radius: 50%;
     border: solid;
     padding: 7px;
+    margin-right: 10px;
 }
 
 .topBtImg:checked{
@@ -51,12 +52,10 @@ body {
 }
 
 .topLogoImg{
-    width: 100px;
+    width: 130px;
     height: 70px;
-    position: fixed;
-    top: 0;
+    padding: 10px;
 }
-
 
 /* 메인 동영상 애니메이션 */
 .bodyWrap{
@@ -217,30 +216,31 @@ canvas {
 
 /* 세번째 화면 */
 .thirdScreen {
-    background-color: white;
-    width: 100%;
+    /* width: 100%; */
     font-size: 17px;
     color: #333;
-    padding-left: 20px;
-    padding-bottom: 80px;
+    padding: 10px;
 }
 
 /* baking video랑 poster 이미지 */
-.videoPoster{
+.videoPoster {
     display: flex;
     gap: 20px;
+    justify-content: center; /* 중앙 정렬 */
+    align-items: center; /* 수직 정렬 */
 }
-.videoPoster video{
-    width: 1020px;
-    height: 600px;
+.videoPoster video, .videoPoster img {
+    height: calc(100vh * 0.7); /* 높이를 화면 높이에 비례하여 설정 */
+    aspect-ratio: 16 / 9; /* 비율 유지 */
+    object-fit: cover; /* 비율 유지하며 콘텐츠 채우기 */
     border-radius: 13px;
-    object-fit: fill; 
+    min-height: 40px;
 }
-.videoPoster img{
-    width: 420px;
-    height: 600px;
-    object-fit: fill; 
-    border-radius: 20px;
+.videoPoster img {
+    max-width: 35%;
+}
+.videoPoster video {
+    max-width: 65%;
 }
 
 /* 네번째 화면 */
@@ -411,15 +411,14 @@ canvas {
 
 /* 반응형: 화면 크기가 768px 이하일 때 */
 @media (max-width: 768px) {
-
     #topNames {
         display: none;
     }
 
     #topButton{
         position: fixed;
-        top: 10px;
-        right: 10px;
+        top: 5px;
+        right: 3px;
     }
 
     /* 반응형시 나타나는 탑박스 */
@@ -467,21 +466,15 @@ canvas {
     .arrowMent{
         margin-top: -200px;
     }
-
     .arrowMent .inviteMent{
         font-size: 20px;
     }
-
     .arrowMent img{
         width: 80px;
         height: 80px;
     }
-    
-    .videoPoster {
-        flex-direction: row; /* 가로로 배치 */
-        gap: 10px; /* 간격 줄이기 */
-    }
 
+    /* 다섯번째 화면, 공지사항 */
     .fifthScreen {
         flex-direction: column;
         align-items: center;
