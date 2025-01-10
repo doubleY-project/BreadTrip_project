@@ -104,8 +104,7 @@ canvas {
 }
 .supportImgFile .supportList{
     border-radius: 13px;
-    padding: 10px;
-    margin: 30px 10px;
+    margin: 20px 10px;
     width: 20%; /* 고정된 픽셀 대신 비율로 설정 */
     max-width: 300px; /* 최대 크기를 제한 */
     height: auto; /* 비율 유지하며 높이 자동 조정 */
@@ -155,7 +154,6 @@ canvas {
 
 /* 두 번째 화면 */
 .secondScreen {
-    background-color: white;
     width: 100%;
     height: 750px;
     font-size: 24px;
@@ -184,24 +182,17 @@ canvas {
     padding-top: 15px;
     padding-left: 70px;
 }
-.startMent{
+.mentStart{
     float:right;
     color: rgb(107, 37, 37);
-
-}
-.mentStart{
     font-size: 130px;
     padding-right: 50px;
-    padding-top: 50px;
 }
-
 
 /* 두번째 화면 아래 - 화살표 및 멘트 한줄 */
 .secondBottomScreen{
     width: 100%;
-    height: 220px;
 }
-
 .arrowMent{
     display: flex;
     justify-content: space-between;
@@ -225,22 +216,20 @@ canvas {
 /* baking video랑 poster 이미지 */
 .videoPoster {
     display: flex;
-    gap: 20px;
-    justify-content: center; /* 중앙 정렬 */
-    align-items: center; /* 수직 정렬 */
-}
-.videoPoster video, .videoPoster img {
+    gap: 1.5%;
+    justify-content: space-between;
     height: calc(100vh * 0.7); /* 높이를 화면 높이에 비례하여 설정 */
-    aspect-ratio: 16 / 9; /* 비율 유지 */
-    object-fit: cover; /* 비율 유지하며 콘텐츠 채우기 */
-    border-radius: 13px;
     min-height: 40px;
+    padding-top: 15px;
 }
 .videoPoster img {
-    max-width: 35%;
+    width: 27.5%;
+    border-radius: 13px;
 }
 .videoPoster video {
-    max-width: 65%;
+    width: 71%;
+    object-fit: cover;
+    border-radius: 13px;
 }
 
 /* 네번째 화면 */
@@ -409,91 +398,6 @@ canvas {
     right: 20px;
 }
 
-/* 반응형: 화면 크기가 768px 이하일 때 */
-@media (max-width: 768px) {
-    #topNames {
-        display: none;
-    }
-
-    #topButton{
-        position: fixed;
-        top: 5px;
-        right: 3px;
-    }
-
-    /* 반응형시 나타나는 탑박스 */
-    .rightBox {
-        z-index: 20000;
-        display: flex; 
-        flex-direction: column; 
-        align-items: flex-end; 
-    }
-
-    .rightBox div {
-        margin-bottom: 20px; 
-    }
-
-    #rightNames div{
-        width: 100px;
-        height: 30px;
-        border: solid;
-        border-radius: 60px;
-        border-width: 2px;
-        display: flex; 
-        align-items: center;
-        justify-content: center;
-        background-color: red;
-    }
-
-    /* 두번째 화면 */
-
-    .secondScreen .mentStartDate{
-        font-size: 20px;
-        margin-left: -40px;
-    }
-    .secondScreen .mentRomantic{
-        font-size: 60px;
-        margin-left: -37px;
-    }
-
-    .secondScreen .mentStart{
-        font-size: 60px;
-        margin-right: -10px;
-    }
-
-    /* 두번째 화면 아래 화살표 및 멘트 */
-
-    .arrowMent{
-        margin-top: -200px;
-    }
-    .arrowMent .inviteMent{
-        font-size: 20px;
-    }
-    .arrowMent img{
-        width: 80px;
-        height: 80px;
-    }
-
-    /* 다섯번째 화면, 공지사항 */
-    .fifthScreen {
-        flex-direction: column;
-        align-items: center;
-        height: 1300px;
-    }
-    .fifthMent, .notice {
-        width: 100%;
-        flex: unset;
-        padding: 0 20px;
-        overflow: hidden;
-    }
-    .fifthMent{
-        margin-left: 60px;
-    }
-    .fifthMent2 {
-        font-size: 50px;
-    }
-}
-
 /* 맨 밑바닥 */
 .bottom{
     background-color: black;
@@ -545,4 +449,90 @@ canvas {
 .countdown-text {
     font-size: 22px;
     font-weight: bold;
+}
+
+
+/* 반응형: 화면 크기가 768px 이하일 때 */
+@media (max-width: 768px) {
+    #topNames {
+        display: none;
+    }
+
+    #topButton{
+        position: fixed;
+        top: 5px;
+        right: 3px;
+    }
+
+    /* 반응형시 나타나는 탑박스 */
+    .rightBox {
+        z-index: 20000;
+        display: flex; 
+        flex-direction: column; 
+        align-items: flex-end; 
+    }
+
+    .rightBox div {
+        margin-bottom: 20px; 
+    }
+
+    #rightNames div{
+        width: 100px;
+        height: 30px;
+        border: solid;
+        border-radius: 60px;
+        border-width: 2px;
+        display: flex; 
+        align-items: center;
+        justify-content: center;
+        background-color: red;
+    }
+
+    /* 두번째 화면 */
+    .secondScreen{
+        height: 480px;
+    }
+    .mentStartDate{
+        font-size: 20px;
+        margin-left: -40px;
+    }
+    .mentRomantic{
+        font-size: 60px;
+        margin-left: -37px;
+    }
+    .mentStart{
+        font-size: 60px;
+        margin-right: -30px;
+    }
+
+    /* 두번째 화면 아래 화살표 및 멘트 */
+    .inviteMent{
+        font-size: 20px;
+    }
+    .arrowImg{
+        width: 80px;
+        height: 80px;
+    }
+    .videoPoster{
+        height: calc(100vh * 0.5); /* 높이를 화면 높이에 비례하여 설정 */
+    }
+
+    /* 다섯번째 화면, 공지사항 */
+    .fifthScreen {
+        flex-direction: column;
+        align-items: center;
+        height: 1300px;
+    }
+    .fifthMent, .notice {
+        width: 100%;
+        flex: unset;
+        padding: 0 20px;
+        overflow: hidden;
+    }
+    .fifthMent{
+        margin-left: 60px;
+    }
+    .fifthMent2 {
+        font-size: 50px;
+    }
 }
