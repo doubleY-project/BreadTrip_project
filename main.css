@@ -19,22 +19,30 @@ body {
     width: 100%;
     display: flex;
     justify-content: flex-end;
-    padding: 15px 10px;
+    padding: 20px 10px;
 }
+
 .topName{
     padding: 12px 10px 0 10px;
 }
+
 #topButton{
     display: flex;
     justify-content: flex-end;
-    padding: 15px 10px;
+    padding: 20px 10px;
 }
+
 .topBtName{
     padding: 15px 20px 0 10px;
 }
+
 .topDate {
-  font-size: 25px;
-  font-weight: 700;
+    display: none;
+    font-size: 25px;
+    font-weight: 700;
+    position: absolute;
+    top: 30px;
+    left: 50%;
 }
 
 /* 맨 위 요소 이미지 */
@@ -85,6 +93,7 @@ canvas {
     width: 100%;
     height: 100vh;
     object-fit: fill;
+    opacity: 0.8;
 }
 
 /* 서포트 이미지 애니메이션 */
@@ -148,7 +157,7 @@ canvas {
     position: absolute;
     bottom: 50px;
     right: 50px;
-    color: rgb(53, 48, 48);
+    color: white;
     z-index: 50;
 }
 
@@ -269,6 +278,7 @@ canvas {
 }
 .swiperBtn:hover, .cafeBtn:hover {
     background-color: rgba(0, 0, 0, 0.8);
+    cursor: pointer;
 }
 
 /* 카페리스트 확인 멘트 */
@@ -357,25 +367,30 @@ canvas {
     padding-top: 20px;
     padding-left: 20px;
 }
+
 .snsListFile {
     width: 100%;
     padding: 0 10px;
     display: flex;
     gap: 5px;
 }
+
 .imgWrapper {
     position: relative;
     cursor: pointer;
 }
+
 .snsList {
     display: block;
     transition: transform 0.3s ease; /* hover 시 약간 확대 */
 }
+
 .imgWrapper:hover .snsList {
     transform: scale(1.05); /* 확대 효과 */
     opacity: 0.5;
     transition: opacity 0.5s ease;
 }
+
 .hoverText {
     position: absolute;
     top: 50%;
@@ -387,6 +402,7 @@ canvas {
     opacity: 0;
     transition: opacity 0.3s ease;
 }
+
 .imgWrapper:hover .hoverText {
     opacity: 1; /* hover 시 텍스트 표시 */
 }
@@ -449,6 +465,11 @@ canvas {
 .countdown-text {
     font-size: 22px;
     font-weight: bold;
+}
+
+/* 호버시 마우스 커서 변환 */
+.topName:hover, .topBtName:hover, .topBtImg:hover, .dayCir:hover, .notice a:hover{
+    cursor: pointer;
 }
 
 
