@@ -45,7 +45,6 @@ body {
     background-color: gray;
     padding: 7px;
 }
-
 .topLogoImg{
     width: 100px;
     height: 70px;
@@ -65,12 +64,10 @@ body {
 .firstScreen{
     position: relative;
 }
-
 .canvasBox{
     width: 100%; 
     height: 100vh;
 }
-
 canvas {
     position: fixed;
     z-index: 100;

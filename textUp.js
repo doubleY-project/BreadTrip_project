@@ -1,5 +1,5 @@
-// 대상 요소들을 선택 (secondScreen과 thirdScreen의 hidden 클래스)
-const elementsToShow = document.querySelectorAll(".secondScreen .hidden");
+// 대상 요소들을 선택 (클래스)
+const elementsToShow = document.querySelectorAll(".hidden");
 
 // Intersection Observer 생성
 const observer = new IntersectionObserver((entries) => {
