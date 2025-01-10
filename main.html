@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./0109 addYj.css" />
+    <link rel="stylesheet" href="./main.css" />
 </head>
 <body>
     <!-- 맨 위 요소들 -->
@@ -31,13 +31,17 @@
         <!-- 첫번째 화면 -->
         <div class="firstScreen">
             <!-- 비디오 -->
+            <div class="mainDate">2024.09.28 Saturday </div>
+            <div id="remain-Time" class="ddaySet"></div>
+            <script src="./dDay.js"></script>
+            <!-- 비디오 -->
             <video src="../imgVd/video.mp4" autoplay muted loop></video>    
             <!-- Canvas (구멍 뚫린 텍스트) -->
             <div class="canvasBox">
-              <!-- Canvas -->
-              <canvas id="canvas"></canvas>
-          </div>
-          <script src="./videoMent.js"></script>
+                <!-- Canvas -->
+                <canvas id="canvas"></canvas>
+            </div>
+            <script src="./videoMent.js"></script>
       </div>
 
         <!-- 두번째 화면 -->
@@ -80,7 +84,7 @@
                 <button class="swiperBtn prevBtn">←</button>
                 <div class="swiper-wrapper"></div>
                 <button class="swiperBtn nextBtn">→</button>
-                <script src="./cafeTest.js"></script>
+                <script src="./cafeImg.js"></script>
             </div>
             <button class="cafeBtn">
                 <span style="font-size:18px">more&nbsp;view</span>
