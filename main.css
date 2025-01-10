@@ -100,11 +100,11 @@ canvas {
 }
 .supportImgFile .supportList{
     border-radius: 13px;
-    /* border: 2px solid black; */
     padding: 10px;
     margin: 30px 10px;
-    width: 300px; 
-    height: 150px;
+    width: 20%; /* 고정된 픽셀 대신 비율로 설정 */
+    max-width: 300px; /* 최대 크기를 제한 */
+    height: auto; /* 비율 유지하며 높이 자동 조정 */
     object-fit: contain;
 }
 
@@ -311,6 +311,7 @@ canvas {
 .fifthMent{
     flex: 4.5;
     padding-left: 50px;
+    min-width: 300px;
 }
 .fifthMent2{
     padding-top: 20px;
@@ -319,12 +320,15 @@ canvas {
 
 /* 오른쪽 */
 .notice{
+    width: 100%;
     flex: 5.5;
 }
 .notice a{
     display: flex;
     border-bottom: solid 2px;
     margin: 30px;
+    max-width: 700px;
+    padding-left: 50px;
 }
 .noticeTop{
     height: 80px;
@@ -360,6 +364,7 @@ canvas {
     padding-left: 20px;
 }
 .snsListFile {
+    width: 100%;
     padding: 0 10px;
     display: flex;
     gap: 5px;
@@ -391,6 +396,27 @@ canvas {
 .imgWrapper:hover .hoverText {
     opacity: 1; /* hover 시 텍스트 표시 */
 }
+/* 반응형: 화면 크기가 768px 이하일 때 */
+@media (max-width: 768px) {
+    .fifthScreen {
+        flex-direction: column;
+        align-items: center;
+        height: 1300px;
+    }
+    .fifthMent, .notice {
+        width: 100%;
+        flex: unset;
+        padding: 0 20px;
+        overflow: hidden;
+    }
+    .fifthMent{
+        margin-left: 60px;
+    }
+    .fifthMent2 {
+        font-size: 50px;
+    }
+}
+
 
 /* 맨 밑바닥 */
 .bottom{
