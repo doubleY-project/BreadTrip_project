@@ -12,7 +12,7 @@ for (let i = 1; i <= 10; i++) {
   const img = new Image();
   img.src = `/imgs/cafeList${i}.jpg`; // 이미지 경로 설정
   img.style.width = '100%'; // 이미지가 슬라이드 안에 맞게 채워짐
-  img.style.height = 'auto';
+  img.style.height = '100%';
   img.style.borderRadius = '10px';
 
   slide.appendChild(img);

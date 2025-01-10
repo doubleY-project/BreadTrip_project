@@ -274,7 +274,7 @@ canvas {
 .nextBtn {
     right: 10px;
 }
-.swiperBtn:hover, .cafeBtn:hover {
+.swiperBtn:hover {
     background-color: rgba(0, 0, 0, 0.8);
     cursor: pointer;
 }
@@ -284,6 +284,13 @@ canvas {
     display: block;
     text-align: center;
     font-size: 30px;
+}
+
+.cafeBtn:hover{
+    background-color: black;
+    color: white;
+    transition: background-color 0.8s ease;
+    cursor: pointer;
 }
 
 /* 글씨 색 변경 */
@@ -368,28 +375,20 @@ canvas {
 }
 
 .snsListFile {
-    width: 100%;
-    padding: 0 10px;
     display: flex;
     gap: 5px;
 }
-
 .imgWrapper {
     position: relative;
     cursor: pointer;
 }
-
 .snsList {
     display: block;
-    transition: transform 0.3s ease; /* hover 시 약간 확대 */
 }
-
 .imgWrapper:hover .snsList {
-    transform: scale(1.05); /* 확대 효과 */
     opacity: 0.5;
     transition: opacity 0.5s ease;
 }
-
 .hoverText {
     position: absolute;
     top: 50%;
@@ -397,11 +396,10 @@ canvas {
     transform: translate(-50%, -50%);
     color: black;
     font-size: 20px;
-    font-weight: 900;
+    font-weight: bolder;
     opacity: 0;
     transition: opacity 0.3s ease;
 }
-
 .imgWrapper:hover .hoverText {
     opacity: 1; /* hover 시 텍스트 표시 */
 }
