@@ -42,9 +42,14 @@ body {
     width: 35px;
     height: 35px;
     border-radius: 50%;
-    background-color: gray;
+    border: solid;
     padding: 7px;
 }
+
+.topBtImg:checked{
+    background-color: red;
+}
+
 .topLogoImg{
     width: 100px;
     height: 70px;
@@ -520,7 +525,7 @@ canvas {
 }
 
 /* 맨 밑 날짜 표시 요소 */
-.dayCir{
+.dayCir {
     color: #fff;
     position: fixed;
     bottom: 10px;
@@ -533,7 +538,18 @@ canvas {
     width: 97px;
     height: 97px;
     background: linear-gradient(to bottom, #fd5392, #f86f64);
+    padding: 10px;
 }
-.cirDate{
-    font-size: 26px;
+
+.cirDate {
+    font-size: 20px;
+    text-align: center;
+}
+
+.dDayShape {
+    font-size: 22px;
+}
+.countdown-text {
+    font-size: 22px;
+    font-weight: bold;
 }
