@@ -33,8 +33,12 @@ body {
     padding: 15px 20px 0 10px;
 }
 .topDate {
-  font-size: 25px;
-  font-weight: 700;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 25px;
+    font-weight: 700;
 }
 
 /* 맨 위 요소 이미지 */
@@ -76,7 +80,15 @@ canvas {
     position: fixed;
     z-index: 100;
     transition: opacity 2s ease, transform 1s;
-  }
+}
+
+.rightBox{
+    display: none;
+    position: fixed;
+    top: 100px;
+    right: 20px;
+}
+
   
 /* 비디오 */
 .firstScreen video {
@@ -184,11 +196,12 @@ canvas {
     padding-top: 15px;
     padding-left: 70px;
 }
+
 .startMent{
     float:right;
     color: rgb(107, 37, 37);
-
 }
+
 .mentStart{
     font-size: 130px;
     padding-right: 50px;
@@ -269,7 +282,6 @@ canvas {
     color: white;
     border: none;
     padding: 10px;
-    cursor: pointer;
     z-index: 10;
 }
 .prevBtn {
@@ -279,6 +291,7 @@ canvas {
     right: 10px;
 }
 .swiperBtn:hover, .cafeBtn:hover {
+    cursor: pointer;
     background-color: rgba(0, 0, 0, 0.8);
 }
 
@@ -402,11 +415,68 @@ canvas {
     opacity: 1; /* hover 시 텍스트 표시 */
 }
 
-.rightBox{
-    display: none;
+
+/* 맨 밑바닥 */
+.bottom{
+    background-color: black;
+    width: 100%;
+    height: 270px;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    padding: 70px 20px;
+}
+.bottomLeft{
+    margin-left: -100px;
+}
+.bottomRight{
+    font-size: 17px;
+    font-weight: bolder;
+    margin-left: -10px;
+    margin-top: 15px;
+    p{
+        color: rgb(153, 148, 148);
+    }
+}
+
+/* 맨 밑 날짜 표시 요소 */
+.dayCir {
+    color: #fff;
     position: fixed;
-    top: 100px;
-    right: 20px;
+    bottom: 10px;
+    right: 10px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 97px;
+    height: 97px;
+    background: linear-gradient(to bottom, #fd5392, #f86f64);
+    padding: 10px;
+}
+
+.cirDate {
+    font-size: 20px;
+    text-align: center;
+}
+
+.dDayShape {
+    font-size: 22px;
+}
+.countdown-text {
+    font-size: 22px;
+    font-weight: bold;
+}
+/* 호버시 마우스 커서 변환 */
+.topName:hover, .topBtName:hover, .topBtImg:hover, .dayCir:hover{
+    cursor: pointer;
+}
+.notice a:hover {
+
+    cursor: pointer;
+
+
 }
 
 /* 반응형: 화면 크기가 768px 이하일 때 */
@@ -419,6 +489,10 @@ canvas {
         position: fixed;
         top: 5px;
         right: 3px;
+    }
+    
+    .topDate{
+        display: block;
     }
 
     /* 반응형시 나타나는 탑박스 */
@@ -492,57 +566,4 @@ canvas {
     .fifthMent2 {
         font-size: 50px;
     }
-}
-
-/* 맨 밑바닥 */
-.bottom{
-    background-color: black;
-    width: 100%;
-    height: 270px;
-    color: white;
-    display: flex;
-    justify-content: space-around;
-    padding: 70px 20px;
-}
-.bottomLeft{
-    margin-left: -100px;
-}
-.bottomRight{
-    font-size: 17px;
-    font-weight: bolder;
-    margin-left: -10px;
-    margin-top: 15px;
-    p{
-        color: rgb(153, 148, 148);
-    }
-}
-
-/* 맨 밑 날짜 표시 요소 */
-.dayCir {
-    color: #fff;
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-    border-radius: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 97px;
-    height: 97px;
-    background: linear-gradient(to bottom, #fd5392, #f86f64);
-    padding: 10px;
-}
-
-.cirDate {
-    font-size: 20px;
-    text-align: center;
-}
-
-.dDayShape {
-    font-size: 22px;
-}
-.countdown-text {
-    font-size: 22px;
-    font-weight: bold;
 }
