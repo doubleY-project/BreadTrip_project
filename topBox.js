@@ -38,7 +38,6 @@
             if (!isOpen) {
                 updateDate();
                 topDate.style.display = 'block';
-                requestAnimationFrame(centerElement);
 
             } else {
                 topDate.style.display = 'none';

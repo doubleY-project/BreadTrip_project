@@ -1,9 +1,7 @@
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
-const mainDate = document.querySelector(".mainDate");
 const ddaySet = document.getElementById("remain-Time");
 
-mainDate.style.opacity = 0;
 ddaySet.style.opacity = 0;
 
 let offsetX = 0;
@@ -44,7 +42,6 @@ function handleScroll() {
         canvas.style.transform = `translateY(-${viewportHeight}px)`;
         canvas.style.opacity = 0;
 
-        mainDate.style.opacity = 1;
         ddaySet.style.opacity = 1;
 
         // diffDay 강제 호출 및 초기화
@@ -53,7 +50,6 @@ function handleScroll() {
         canvas.style.transform = "translateY(0)";
         canvas.style.opacity = 1;
 
-        mainDate.style.opacity = 0;
         ddaySet.style.opacity = 0;
     }
 }

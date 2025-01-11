@@ -118,36 +118,6 @@ canvas {
     object-fit: contain;
 }
 
-/* 메인화면 날짜 */
-.mainDate {
-    font-size: 20px;
-    color: black;
-    position: absolute;
-    top: 350px;
-    right: 50px;
-    border: 2px solid white;
-    border-radius: 50px;
-    box-shadow: 0px 0px 20px black;
-    width: 260px;
-    height: 35px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    animation: moveDiagonal 5s infinite alternate;
-    z-index: 50;
-}
-
-/* 메인화면 둥근 박스 애니메이션 */
-@keyframes moveDiagonal {
-    0% {
-        transform: translate(0, 0); /* 초기 위치 */
-    }
-    100% {
-        transform: translate(-40px, -30px); /* 왼쪽 위로 이동 */
-    }
-}
-
 /* D-Day 텍스트 */
 .ddaySet {
     font-size: 200px;
