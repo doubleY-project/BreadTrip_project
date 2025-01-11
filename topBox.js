@@ -47,7 +47,6 @@
         // 초기화
         updateDate();
         topDate.style.display = 'none';
-        requestAnimationFrame(centerElement);
     }
 
     // 초기화 함수 실행
