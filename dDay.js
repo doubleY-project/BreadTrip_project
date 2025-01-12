@@ -51,7 +51,7 @@ function diffDay() {
 
 // 스크롤 이벤트 처리 함수
 function handleScroll() {
-    const triggerHeight = window.innerHeight * 0.5; // 화면 높이의 50% 지점
+    const triggerHeight = window.innerHeight * 0.6; // 화면 높이의 60% 지점
     const ddayElement = document.getElementById("remain-Time");
 
     if (ddayElement && !isCounting) {

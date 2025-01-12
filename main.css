@@ -458,7 +458,6 @@ canvas {
     .rightBox {
         background-color: white;
         z-index: 2000;
-        display: flex; 
         flex-direction: column; 
         align-items: flex-end; 
         border-radius: 5px;
