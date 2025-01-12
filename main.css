@@ -251,10 +251,11 @@ canvas {
 }
 
 /* 카페리스트 확인 멘트 */
-.forthScreen span:first-child{
+.forthMent{
     display: block;
     text-align: center;
     font-size: 30px;
+    padding-top: 80px;
 }
 
 .cafeBtn:hover{
@@ -276,13 +277,13 @@ canvas {
     display: block;
     margin: auto;
     background-color: white;
-    margin-top: 20px;
+    margin-top: 40px;
     border-radius: 15px;
 }
 
 /* 다섯번째 화면 */
 .fifthScreen{
-    padding-top: 100px;
+    padding-top: 150px;
     display: flex;
     justify-content: space-between;
     height: 1100px;
@@ -306,9 +307,8 @@ canvas {
 }
 .notice a{
     display: flex;
-    border-bottom: solid 2px;
-    margin: 30px;
-    /* max-width: 700px; */
+    border-bottom: solid 2px #ccc;
+    margin: 20px;
     padding-left: 50px;
 }
 .noticeTop{
@@ -327,14 +327,14 @@ canvas {
     text-align: center;
     font-size: 50px;
     padding-bottom: 13px;
-    padding-left: 10px;
+    margin-left: -40px;
 }
 .infodate{
     font-size: 13px;
 }
 .title{
     padding: 25px;
-    margin-left: 10px;
+    margin-left: 50px;
 }
   
 /* snsList */
@@ -352,6 +352,7 @@ canvas {
 .imgWrapper {
     position: relative;
     cursor: pointer;
+    max-width: 260px;
 }
 .snsList {
     display: block;
@@ -384,7 +385,7 @@ canvas {
 
 /* 맨 밑바닥 */
 .bottom{
-    background-color: black;
+    background-color: rgb(82, 80, 80);
     width: 100%;
     height: 350px;
     color: white;
@@ -418,23 +419,11 @@ canvas {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 97px;
-    height: 97px;
-    background: linear-gradient(to bottom, #fd5392, #f86f64);
+    width: 77px;
+    height: 77px;
+    background: linear-gradient(to bottom, #605a5c, #030303);
     padding: 10px;
-}
-
-.cirDate {
-    font-size: 20px;
     text-align: center;
-}
-
-.dDayShape {
-    font-size: 22px;
-}
-.countdown-text {
-    font-size: 22px;
-    font-weight: bold;
 }
 
 /* 호버시 마우스 커서 변환 */

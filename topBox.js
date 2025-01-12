@@ -14,7 +14,7 @@
             const topDate = document.querySelector('.topDate');
             
             if (topDate) {
-                topDate.textContent = `( Korea, ${hours}:${minutes} )`;
+                topDate.innerHTML = `(<span style="font-weight: lighter; color: rgb(67, 63, 63);">Korea</span>, ${hours}:${minutes})`;
             }
         };
 
