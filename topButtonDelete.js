@@ -1,7 +1,6 @@
 function btClick2() {
     const rightBox = document.querySelector('.rightBox'); 
     const watchBt = document.getElementById("topButton");
-    const nameWatch = document.querySelectorAll('.topNames');
     
     let isOpen = false; // 초기 상태는 rightBox 숨김
 
@@ -51,3 +50,6 @@ function btClick2() {
 document.addEventListener('DOMContentLoaded', () => {
     btClick2();
 });
+
+
+

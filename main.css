@@ -64,6 +64,13 @@ body {
     padding: 10px;
 }
 
+/* 오른쪽 박스 */
+.rightBox{
+    position: fixed;
+    top: 100px;
+    right: 20px;
+}
+
 /* 메인 동영상 애니메이션 */
 .bodyWrap{
     width: 100%;
@@ -375,12 +382,6 @@ canvas {
     opacity: 1; /* hover 시 텍스트 표시 */
 }
 
-.rightBox{
-    display: none;
-    position: fixed;
-    top: 100px;
-    right: 20px;
-}
 
 /* 맨 밑바닥 */
 .bottom{
@@ -420,7 +421,7 @@ canvas {
     justify-content: center;
     width: 97px;
     height: 97px;
-    background: linear-gradient(to bottom, #fd5392, #f86f64);
+    background: linear-gradient(to bottom, #7d7b7b, #0c0c0c);
     padding: 10px;
 }
 
@@ -441,7 +442,6 @@ canvas {
 .topName:hover, .topBtName:hover, .topBtImg:hover, .dayCir:hover, .notice a:hover{
     cursor: pointer;
 }
-
 
 /* 반응형: 화면 크기가 768px 이하일 때 */
 @media (max-width: 768px) {
