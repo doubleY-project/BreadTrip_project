@@ -17,7 +17,21 @@
         }
     };
 
+<<<<<<< HEAD
     setInterval(updateDate, 1000); 
+=======
+       // 날짜 업데이트 함수
+        const updateDate = () => {
+            const today = new Date();
+            const hours = ('0' + today.getHours()).slice(-2);
+            const minutes = ('0' + today.getMinutes()).slice(-2);
+            const topDate = document.querySelector('.topDate');
+            
+            if (topDate) {
+                topDate.innerHTML = `(<span style="font-weight: lighter; color: rgb(67, 63, 63);">Korea</span>, ${hours}:${minutes})`;
+            }
+        };
+>>>>>>> c7681911ca63dab17b0978c104e277718dfe4b44
 
     // 페이지 로드 시 한번 호출, 새로고침 없이도 바로 표시되도록
     document.addEventListener('DOMContentLoaded', () => {

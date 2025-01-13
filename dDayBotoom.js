@@ -18,7 +18,7 @@ function diffDay2() {
         // D-day 이후일 경우
         const limitedDiffDay2 = Math.min(Math.abs(diffDay2), 99); // 99일 이상일 경우 99로 제한
         plusMinus.innerHTML = "D Day";
-        element.innerHTML = `<span>${limitedDiffDay2 === 99 ? "+99" : limitedDiffDay2}</span>`; // D + 99+로 표시
+        element.innerHTML = `<span><b>${limitedDiffDay2 === 99 ? "+99" : limitedDiffDay2}</b></span>`; // D + 99+로 표시
     }
 }
 
