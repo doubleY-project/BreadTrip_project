@@ -1,11 +1,11 @@
-const dday = new Date("September 28, 2025").setHours(0, 0, 0, 0); // D-day 설정
+const dday = new Date("September 28, 2024").setHours(0, 0, 0, 0); // D-day 설정
 
 let isCounting = false; // 현재 카운트 중인지 확인하기 위한 플래그
 let hasCounted = false; // 한 번 카운트 완료 여부 확인
 
 // 카운트 진행 함수
-function countingType2(finalValue) {
-    const element = document.querySelector("#number2") || document.querySelector("#remain-Time");
+function countingType(finalValue) {
+    const element = document.querySelector("#number") || document.querySelector("#remain-Time");
 
     // 숫자 초기화
     element.innerHTML = "00";
@@ -39,18 +39,18 @@ function diffDay() {
     const elementBt = document.querySelector(".countdown-text");
 
     if (gap > 0) { // D-day 이전일 경우
-        element.innerHTML = `D - <span id="number2"></span>`;
+        element.innerHTML = `D - <span id="number"></span>`;
         plusMinus.innerHTML = "D Day";
         elementBt.innerHTML = `<span><b>-${diffDay}</b></span>`; 
-        countingType2(diffDay);
+        countingType(diffDay);
     } else if (gap === 0) { // D-day 당일일 경우
         element.innerHTML = "D-Day";
         elementBt.innerHTML = "D-Day";
     } else { // D-day 이후일 경우
         const limitedDiffDay = Math.max(diffDay, 99); // 최대 99로 제한
         if (!hasCounted) {
-            element.innerHTML = `D + <span id="number2"><b></b></span>`;
-            countingType2(Math.abs(limitedDiffDay));
+            element.innerHTML = `D + <span id="number"><b></b></span>`;
+            countingType(Math.abs(limitedDiffDay));
         }
         plusMinus.innerHTML = "D Day";
         elementBt.innerHTML = `<span><b>${limitedDiffDay === 99 ? "+99" : limitedDiffDay}</b></span>`;

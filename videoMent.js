@@ -1,7 +1,7 @@
 const canvas = document.getElementById("canvas");
-const ctx = canvas.getContext("2d");
-const ddaySet = document.getElementById("remain-Time");
+const ctx = canvas.getContext("2d"); // 캔버스에 2D로 작업
 
+const ddaySet = document.getElementById("remain-Time");
 ddaySet.style.opacity = 0;
 
 let offsetX = 0;
@@ -14,7 +14,7 @@ function resizeCanvas() {
     ctx.fillStyle = "white";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-    ctx.globalCompositeOperation = "destination-out";
+    ctx.globalCompositeOperation = "destination-out"; // 그리기 연산방식 설정
     ctx.font = "bold 550px Arial";
     ctx.textAlign = "center";
     ctx.textBaseline = "middle";
