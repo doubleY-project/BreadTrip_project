@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // 클릭 이벤트 추가
         img.addEventListener('click', () => {
-            alert('준비중입니다');
+            swal("준비중입니다", {icon: "warning"});
         });
 
         // "view" 텍스트 추가

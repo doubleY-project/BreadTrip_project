@@ -23,7 +23,6 @@ body {
     justify-content: flex-end;
     padding: 20px 10px;
 }
-
 .topName{
     padding: 12px 10px 0 10px;
 }
@@ -33,7 +32,6 @@ body {
     justify-content: flex-end;
     padding: 20px 10px;
 }
-
 .topBtName{
     padding: 15px 20px 0 10px;
 }
@@ -53,11 +51,10 @@ body {
     width: 35px;
     height: 35px;
     border-radius: 50%;
-    border: solid;
+    border: solid 3px;
     padding: 7px;
     margin-right: 10px;
 }
-
 .topLogoImg{
     width: 130px;
     height: 70px;
@@ -83,7 +80,7 @@ canvas {
     position: fixed;
     z-index: 100;
     transition: opacity 2s ease, transform 1s;
-  }
+}
   
 /* 비디오 */
 .firstScreen video {
@@ -113,7 +110,7 @@ canvas {
 .supportImgFile .supportList{
     border-radius: 13px;
     margin: 20px 10px;
-    width: 20%; /* 고정된 픽셀 대신 비율로 설정 */
+    width: 20%;
     max-width: 300px; /* 최대 크기를 제한 */
     height: auto; /* 비율 유지하며 높이 자동 조정 */
     object-fit: contain;
@@ -121,10 +118,10 @@ canvas {
 
 /* D-Day 텍스트 */
 .ddaySet {
-    font-size: 200px;
+    font-size: 190px;
     font-weight: bolder;
     position: absolute;
-    bottom: 50px;
+    bottom: 40px;
     right: 50px;
     color: white;
     z-index: 50;
@@ -184,13 +181,6 @@ canvas {
 }
 
 /* 세번째 화면 */
-.thirdScreen {
-    /* width: 100%; */
-    font-size: 17px;
-    color: #333;
-    padding: 10px;
-}
-
 /* baking video랑 poster 이미지 */
 .videoPoster {
     display: flex;
@@ -216,7 +206,7 @@ canvas {
     position: relative;
   }
 .swiper-wrapper {
-    display: flex; /* 슬라이드를 가로로 정렬 */
+    display: flex;
     transition: transform 0.3s ease-in-out;
     will-change: transform;
     gap: 10px;
@@ -247,7 +237,6 @@ canvas {
 }
 .swiperBtn:hover {
     background-color: rgba(0, 0, 0, 0.8);
-    cursor: pointer;
 }
 
 /* 카페리스트 확인 멘트 */
@@ -257,7 +246,16 @@ canvas {
     font-size: 30px;
     padding-top: 80px;
 }
-
+/* 카페리스트 더보기 버튼 */
+.cafeBtn{
+    width: 150px;
+    height: 50px;
+    display: block;
+    margin: auto;
+    background-color: white;
+    margin-top: 40px;
+    border-radius: 15px;
+}
 .cafeBtn:hover{
     background-color: black;
     color: white;
@@ -268,17 +266,6 @@ canvas {
 /* 글씨 색 변경 */
 .highlight {
     color: rgb(183, 63, 83);
-}
-
-/* 카페리스트 더보기 버튼 */
-.cafeBtn{
-    width: 150px;
-    height: 50px;
-    display: block;
-    margin: auto;
-    background-color: white;
-    margin-top: 40px;
-    border-radius: 15px;
 }
 
 /* 다섯번째 화면 */
@@ -385,7 +372,7 @@ canvas {
 
 /* 맨 밑바닥 */
 .bottom{
-    background-color: rgb(82, 80, 80);
+    background-color: black;
     width: 100%;
     height: 350px;
     color: white;
@@ -430,7 +417,6 @@ canvas {
 .topName:hover, .topBtName:hover, .topBtImg:hover, .dayCir:hover, .notice a:hover{
     cursor: pointer;
 }
-
 
 /* 반응형: 화면 크기가 768px 이하일 때 */
 @media (max-width: 768px) {
