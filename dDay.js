@@ -8,7 +8,7 @@ function countingType2(finalValue) {
     const element = document.querySelector("#number2") || document.querySelector("#remain-Time");
 
     // 숫자 초기화
-    element.innerHTML = "0";
+    element.innerHTML = "00";
 
     let current = 0; // 초기값
     const duration = 2000; // 애니메이션 지속 시간 (2초)

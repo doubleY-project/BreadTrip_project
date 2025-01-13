@@ -428,7 +428,7 @@ canvas {
 }
 
 /* 호버시 마우스 커서 변환 */
-.topName:hover, .topBtName:hover, .topBtImg:hover, .dayCir:hover, .notice a:hover{
+.topName:hover, .topBtName:hover, .topBtImg:hover, .notice a:hover{
     cursor: pointer;
 }
 
