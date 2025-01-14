@@ -153,6 +153,7 @@ canvas {
     transform: translateY(0); /* 원래 위치로 이동 */
 }
 
+
 /* 로맨틱 멘트 디자인 */
 .mentStartDate {
     font-size: 30px;
@@ -440,6 +441,7 @@ canvas {
         border-radius: 5px;
         overflow: hidden;
         box-shadow:  0px 0px 8px black;
+        display: block;
     }
     .rightName{
         cursor: pointer;
