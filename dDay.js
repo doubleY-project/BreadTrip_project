@@ -1,3 +1,4 @@
+
 const dday = new Date("September 28, 2024").setHours(0, 0, 0, 0); // D-day 설정
 
 let isCounting = false; // 현재 카운트 중인지 확인하기 위한 플래그
@@ -6,6 +7,7 @@ let hasCounted = false; // 한 번 카운트 완료 여부 확인
 // 카운트 진행 함수
 function countingType(finalValue) {
     const element = document.querySelector("#number") || document.querySelector("#remain-Time");
+    
 
     // 숫자 초기화
     element.innerHTML = "00";
@@ -59,24 +61,23 @@ function diffDay() {
 
 // 스크롤 이벤트 처리 함수
 function handleScroll() {
-    const triggerHeight = window.innerHeight * 0.6; // 화면 높이의 60% 지점
+    const triggerHeight = window.innerHeight * 0.6; 
     const ddayElement = document.getElementById("remain-Time");
 
     if (ddayElement && !isCounting) {
-        const elementTop = ddayElement.getBoundingClientRect().top; // 요소의 화면 상단에서의 위치
-        const elementBottom = ddayElement.getBoundingClientRect().bottom; // 요소의 화면 하단에서의 위치
+        const elementTop = ddayElement.getBoundingClientRect().top;
+        const elementBottom = ddayElement.getBoundingClientRect().bottom; 
 
-        // 스크롤을 내릴 때마다 카운트 실행하기 위한 조건 추가
         if (elementTop < triggerHeight && elementBottom > 0 && !hasCounted) {
             diffDay();
         }
 
-        // 위로 올리면 카운트를 재시작할 수 있도록 해줌
         if (elementTop > triggerHeight && hasCounted) {
-            hasCounted = false; // 다시 카운트를 실행할 수 있게 플래그 초기화
+            hasCounted = false; 
         }
     }
 }
 
-// 스크롤 이벤트 감지
 window.addEventListener("scroll", handleScroll);
+
+

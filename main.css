@@ -63,6 +63,7 @@ body {
 
 /* 오른쪽 박스 */
 .rightBox{
+    display: none;
     position: fixed;
     top: 100px;
     right: 20px;
@@ -407,8 +408,8 @@ canvas {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 97px;
-    height: 97px;
+    width: 77px;
+    height: 77px;
     background: linear-gradient(to bottom, #7d7b7b, #0c0c0c);
     padding: 10px;
     text-align: center;
