@@ -6,9 +6,9 @@
 <h2>:star: 실행화면</h2>
 <h4>[Main Page]</h4>
 <p>- 무한하게 흐르는 글자를 통해 동영상 확인 가능 (JS로 구현)</p>
-<img src="">
+<img src="https://github.com/user-attachments/assets/0891da39-4040-469a-8c1f-e355bc4b7694">
 <p>- 축제 날짜에 맞춰 디데이 카운트 실행</p>
-<img src="">
+<img src="https://github.com/user-attachments/assets/c4ca493a-7804-45b7-ab51-7b42407003e9">
 <br />
 
 <p>- 다양한 애니메이션 효과 사용</p>
