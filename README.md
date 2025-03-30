@@ -17,7 +17,7 @@
 
 <br />
 <h2>💬 Reference</h2>
-**[정동야행](https://jeongdong-culturenight.kr/kor/index.php)**
+<p><strong><a href="https://jeongdong-culturenight.kr/kor/index.php">정동야행</a></strong></p>
 
 
 <br /><br />
